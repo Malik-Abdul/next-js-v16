@@ -19,11 +19,22 @@ Open [http://my-test-app:3016](http://my-test-app:3016) with your browser to see
 ## insight:
 
 1. Reactjs
-2. Nextjs
+2. Next.js
 3. Mock Interviews
 
-<!-- This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel. -->
-<!--
+## Next.js
+
+1. Routing (File base routes)
+2. API routes (Backend routes for full stack application)
+3. Rendering (Server side and client side)
+4. Data fetching (Stream line data fetching, buil it async await support in react components making data fetching effecient)
+5. Styling
+6. Optimization (Images, fonts and scripts)
+7. Development and production build system
+
+   <!-- This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel. -->
+   <!--
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

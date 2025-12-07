@@ -6,7 +6,8 @@
     "dev": "next dev --hostname my-test-app --port 3016",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "json": "json-server --watch db.json --port 4500"
   },
   "dependencies": {
     "react": "19.2.0",

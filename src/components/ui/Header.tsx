@@ -9,7 +9,7 @@ const Header = () => {
     { id: 3, title: "Contexct API", link: "/contextApi" },
     { id: 4, title: "CSS Props", link: "/cssProps" },
     { id: 5, title: "HOC", link: "/hoc" },
-    { id: 6, title: "Mock Interviews", link: "/mockInterviews" },
+    { id: 6, title: "Mock Interviews", link: "/mock-interviews" },
 
 
   ];

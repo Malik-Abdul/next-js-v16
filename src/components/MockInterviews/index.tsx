@@ -5,3 +5,4 @@ export const SortProductsCatsWise = dynamic(
 export const FetchUsersWithState = dynamic(
   () => import("./FetchUsersWithState")
 );
+export const HandleKeyAsIndex = dynamic(() => import("./HandleKeyAsIndex"));

@@ -8,9 +8,9 @@ import Content from "./Content";
 const MainLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <Fragment>
-      {/* <Header /> */}
+      <Header />
       <div className="main">
-        {/* <SideBar /> */}
+        <SideBar />
         <Content>{children}</Content>
       </div>
       {/* <Footer /> */}

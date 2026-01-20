@@ -5,13 +5,11 @@ import { Fragment } from "react/jsx-runtime";
 const Header = () => {
   const nav = [
     { id: 1, title: "Next JS", link: "/next-js" },
-    { id: 2, title: "React Hooks", link: "/reactHooks" },
+    { id: 2, title: "React JS", link: "/react-js" },
     { id: 3, title: "Contexct API", link: "/contextApi" },
     { id: 4, title: "CSS Props", link: "/cssProps" },
     { id: 5, title: "HOC", link: "/hoc" },
     { id: 6, title: "Mock Interviews", link: "/mock-interviews" },
-
-
   ];
 
   return (

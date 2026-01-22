@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { buildApiUrl, API_ENDPOINTS } from "@/constants/api";
 
-const JSON_SERVER_URL = "http://localhost:4500/users";
+const JSON_SERVER_URL = buildApiUrl(API_ENDPOINTS.USERS);
 
 export async function GET() {
   return NextResponse.json({ message: "Hello from GET!" });

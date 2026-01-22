@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Fragment } from "react/jsx-runtime";
-import { BUTTON_SUCCESS_CLASSES } from "@/constants/className";
+import { BUTTON_WARNING_CLASSES } from "@/constants/className";
 
 const ChThree = ({ name }: { name: string }) => {
   console.log("Child Component Three redndered");
@@ -34,7 +34,7 @@ const ChOne = ({
       <button
         onClick={() => setName("Awan")}
         type="button"
-        className={BUTTON_SUCCESS_CLASSES}
+        className={BUTTON_WARNING_CLASSES}
       >
         Change Name
       </button>

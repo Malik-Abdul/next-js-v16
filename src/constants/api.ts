@@ -1,13 +1,12 @@
 /**
  * API Configuration and URL Builders
- * 
+ *
  * Base URL is configured via environment variable NEXT_PUBLIC_API_BASE_URL
  * Defaults to http://localhost:4500 if not set
  */
 
 // Get base URL from environment variable or use default
-export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL as string;
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL as string;
 
 // API Endpoints
 export const API_ENDPOINTS = {
@@ -26,7 +25,7 @@ export const buildApiUrl = (
   params?: Record<string, string | number | undefined>
 ): string => {
   const url = new URL(endpoint, API_BASE_URL);
-  
+
   if (params) {
     Object.entries(params).forEach(([key, value]) => {
       if (value !== undefined && value !== null && value !== "") {
@@ -34,7 +33,7 @@ export const buildApiUrl = (
       }
     });
   }
-  
+
   return url.toString();
 };
 
@@ -59,17 +58,17 @@ export const buildUsersUrl = (options?: {
  */
 export const USERS_URLS = {
   // Default salary range used in multiple components
-  SALARY_RANGE_51000_51500: buildUsersUrl({
-    salary_gte: 51000,
+  SALARY_RANGE_51480_51500: buildUsersUrl({
+    salary_gte: 51480,
     salary_lte: 51500,
   }),
-  
+
   // Other common ranges
   SALARY_RANGE_50000_60000: buildUsersUrl({
     salary_gte: 50000,
     salary_lte: 60000,
   }),
-  
+
   // Base users endpoint
   BASE: buildApiUrl(API_ENDPOINTS.USERS),
 } as const;

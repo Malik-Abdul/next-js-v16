@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Fragment } from "react/jsx-runtime";
 import { USERS_URLS } from "@/constants/api";
+import { FetchUsersType } from "@/types/Users";
 
-const url = USERS_URLS.SALARY_RANGE_51000_51500;
+const url = USERS_URLS.SALARY_RANGE_51480_51500;
 
-const T03ModerenWayToUseUseEffect = () => {
-  // Older way to fetch data
-  // Problems:
-  // 1. Extra rerender
-  // 2 Extra variables
-  const [data, setData] = useState();
+const T01WithOlderWay = () => {
+  const [data, setData] = useState<FetchUsersType[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   useEffect(() => {
@@ -35,11 +32,28 @@ const T03ModerenWayToUseUseEffect = () => {
     };
     fetchUsers();
   }, []);
+  {
+    console.log("Rendering T01OlderWay");
+  }
   return (
     <Fragment>
-      <div>{console.log("Rendering T03ModerenWayToUseUseEffect")}</div>
-      <div>Moderen way to use UseEffect</div>
+      <h5>Older Way to fetch data</h5>
+      <div>
+        {isLoading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : data.length > 0 ? (
+          data.map((item) => (
+            <div className="text-amber-200 text-xs" key={item.id}>
+              {item.name}
+            </div>
+          ))
+        ) : (
+          <div>No Data</div>
+        )}
+      </div>
     </Fragment>
   );
 };
-export default T03ModerenWayToUseUseEffect;
+export default T01WithOlderWay;

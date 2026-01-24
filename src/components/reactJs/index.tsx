@@ -5,21 +5,22 @@ import { Fragment, useState } from "react";
 import PropsDrillingF from "./PropsDrillingF";
 import T02UseOfUseMemo from "./T02UseOfUseMemo";
 import T01Debounce from "./T01Debounce";
-import T03ModerenWayToUseUseEffect from "./T03ModerenWayToUseUseEffect";
+import T03ModerenWayToFetchData from "./T03ModerenWayToFetchData";
 
 const ReactJS = () => {
   const [currentTopic, setCurrentTopic] = useState<number>(1);
   const allTopics: { [key: number]: React.ReactNode } = {
-    1: <PropsDrillingF />,
+    4: <PropsDrillingF />,
     2: <T01Debounce />,
     3: <T02UseOfUseMemo />,
-    4: <T03ModerenWayToUseUseEffect />,
+    1: <T03ModerenWayToFetchData />,
   };
   const links = [
     { title: "Props Drilling", value: 1 },
     { title: "Debounce", value: 2 },
     { title: "UseMemo", value: 3 },
     { title: "Moderen way to use UseEffect", value: 4 },
+    { title: "Use of Suspense", value: 5 },
   ];
 
   return (

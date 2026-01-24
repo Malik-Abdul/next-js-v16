@@ -1,4 +1,4 @@
-export interface FetchUsers {
+export interface FetchUsersType {
   id: number;
   name: string;
   gender: string;

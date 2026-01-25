@@ -10,6 +10,7 @@ const Header = () => {
     { id: 4, title: "CSS Props", link: "/cssProps" },
     { id: 5, title: "HOC", link: "/hoc" },
     { id: 6, title: "Mock Interviews", link: "/mock-interviews" },
+    { id: 7, title: "React Query", link: "/react-query" },
   ];
 
   return (

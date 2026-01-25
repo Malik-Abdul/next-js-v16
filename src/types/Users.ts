@@ -25,3 +25,6 @@ export interface FetchUsersType {
   bonus: number;
   lastPromotionDate: string;
 }
+export interface FetchUsersTypeData {
+  data: FetchUsersType[];
+}

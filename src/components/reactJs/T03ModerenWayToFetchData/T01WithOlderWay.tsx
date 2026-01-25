@@ -37,7 +37,8 @@ const T01WithOlderWay = () => {
   }
   return (
     <Fragment>
-      <h5>Older Way to fetch data</h5>
+      <h2>Older Way to fetch data</h2>
+      <div>Withoit React Query</div>
       <div>
         {isLoading ? (
           <div>Loading...</div>

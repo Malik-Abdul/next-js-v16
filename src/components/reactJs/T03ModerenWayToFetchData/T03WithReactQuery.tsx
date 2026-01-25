@@ -24,7 +24,8 @@ const T03WithReactQuery = () => {
       {data &&
         data.map((u) => (
           <div key={u.id}>
-            {u.id} - {u.name} - {u.salary}
+            id: {u.id} - Name: {u.name} -{" "}
+            <span className="text-red-500">Salary: {u.salary}</span>
           </div>
         ))}
     </Fragment>

@@ -5,8 +5,9 @@ import { Fragment } from "react/jsx-runtime";
 // import T03useQueryOnClick from "./RQParts/T03useQueryOnClick";
 // import T04SuccessAndErrorCallbacks from "./RQParts/T04SuccessAndErrorCallbacks";
 // import T05DataTransformation from "./RQParts/T05DataTransformation";
-import T06ReactQueryCustomHook from "./RQParts/T06ReactQueryCustomHook";
-import T06ReactQueryCustomHookCallAgain from "./RQParts/T06ReactQueryCustomHookCallAgain";
+// import T06ReactQueryCustomHook from "./RQParts/T06ReactQueryCustomHook";
+// import T06ReactQueryCustomHookCallAgain from "./RQParts/T06ReactQueryCustomHookCallAgain";
+import T07QueryById from "./RQParts/T07QueryById";
 
 const T02WithReactQuery = () => {
   return (
@@ -17,8 +18,9 @@ const T02WithReactQuery = () => {
       {/* <T03useQueryOnClick /> */}
       {/* <T04SuccessAndErrorCallbacks /> */}
       {/* <T05DataTransformation /> */}
-      <T06ReactQueryCustomHook />
-      <T06ReactQueryCustomHookCallAgain />
+      {/* <T06ReactQueryCustomHook />
+      <T06ReactQueryCustomHookCallAgain /> */}
+      <T07QueryById />
     </Fragment>
   );
 };

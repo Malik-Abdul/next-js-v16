@@ -9,28 +9,18 @@ const fetchUsers = async (): Promise<FetchUsersTypeData> => {
   return axios.get(USERS_URLS.SALARY_RANGE_51480_51500);
 };
 
-const T02QueryCache = () => {
-  const { data, error, isError, isLoading, isFetching } = useQuery({
+const T03useQueryOnClick = () => {
+  // refetch: will refetch the data onClick handler
+  const { data, error, isError, isLoading, isFetching, refetch } = useQuery({
     queryKey: ["users"],
     queryFn: fetchUsers,
-    // gcTime: 5 * 60 * 1000, // 5 minutes is default we can change it
-    // gcTime: 5000, // 5s
-    // staleTime: 30000, // 30s and set cache time gcTime be default 5 minutes
-    // refetchOnMount: true,
-    // refetchOnMount: false,
-    // refetchOnMount: "always",
-    // refetchOnWindowFocus: true,
-    // refetchOnWindowFocus: false,
-    // refetchOnWindowFocus: "always",
-    // refetchInterval: false,
-    refetchInterval: 2000,
-    refetchIntervalInBackground: false,
+    enabled: false, // make data: empty
   });
   console.log({ isFetching, isLoading });
-  if (isLoading) {
+  if (isLoading || isFetching) {
     return (
       <Fragment>
-        <h2>T02QueryCache</h2>
+        <h3>T03useQueryOnClick</h3>
         <div>Loading...</div>
       </Fragment>
     );
@@ -38,15 +28,21 @@ const T02QueryCache = () => {
   if (isError) {
     return (
       <Fragment>
-        <h2>T02QueryCache</h2>
+        <h3>T03useQueryOnClick</h3>
         <div>{(error as Error).message}</div>
       </Fragment>
     );
   }
   return (
     <Fragment>
-      <h2>T02QueryCache</h2>
-      <h3>Users</h3>
+      <h3>T03useQueryOnClick</h3>
+      <button
+        className="px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition"
+        onClick={() => refetch()}
+      >
+        Click to Fetch
+      </button>
+      <h4>Users</h4>
       {data &&
         data?.data.map((u) => (
           <div key={u.id}>
@@ -58,4 +54,4 @@ const T02QueryCache = () => {
   );
 };
 
-export default T02QueryCache;
+export default T03useQueryOnClick;

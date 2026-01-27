@@ -7,7 +7,9 @@ import { Fragment } from "react/jsx-runtime";
 // import T05DataTransformation from "./RQParts/T05DataTransformation";
 // import T06ReactQueryCustomHook from "./RQParts/T06ReactQueryCustomHook";
 // import T06ReactQueryCustomHookCallAgain from "./RQParts/T06ReactQueryCustomHookCallAgain";
-import T07QueryById from "./RQParts/T07QueryById";
+// import T07QueryById from "./RQParts/T07QueryById";
+// import T08ParallelQueries from "./RQParts/T08ParallelQueries";
+import T09ParallelDynamicQueries from "./RQParts/T09ParallelDynamicQueries";
 
 const T02WithReactQuery = () => {
   return (
@@ -20,7 +22,9 @@ const T02WithReactQuery = () => {
       {/* <T05DataTransformation /> */}
       {/* <T06ReactQueryCustomHook />
       <T06ReactQueryCustomHookCallAgain /> */}
-      <T07QueryById />
+      {/* <T07QueryById /> */}
+      {/* <T08ParallelQueries /> */}
+      <T09ParallelDynamicQueries />
     </Fragment>
   );
 };
